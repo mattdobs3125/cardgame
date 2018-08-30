@@ -4,7 +4,7 @@
       <button type="button" class="btn btn-warning" @click='deckSelection(1)'>Robot Deck</button>
       <button type="button" class="btn btn-primary" @click='deckSelection(2)'>Cat Deck</button>
       <div v-if="game.id">
-        {{game.id}}
+        {{game.players[0].name}}
         
         
       </div>
