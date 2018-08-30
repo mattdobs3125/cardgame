@@ -4,8 +4,8 @@
       <button type="button" class="btn btn-warning" @click='deckSelection(1)'>Robot Deck</button>
       <button type="button" class="btn btn-primary" @click='deckSelection(2)'>Cat Deck</button>
       <div v-if="game.id">
+        <div v-for="card in game.players[0].hand" :key"card.id"></div>
         {{game.players[0].name}}
-        
         
       </div>
     <img alt="Vue logo" src="../assets/logo.png">

@@ -10,7 +10,7 @@ let cardApi = Axios.create({
   timout: 3000
 })
 
-
+//used to store all my data
 
 export default new Vuex.Store({
   state: {
@@ -23,7 +23,7 @@ export default new Vuex.Store({
   mutations: {
   set (state, data){
     state.game = data
-    router.push({name:'game',params:{ gameId: game.id}})
+    // router.push({name:'data',params:{ gameId: data.id}})
     console.log(data)
   },
   setPlayer(state,){
