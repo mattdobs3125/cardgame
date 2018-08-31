@@ -26,12 +26,18 @@ export default new Vuex.Store({
     // router.push({name:'data',params:{ gameId: data.id}})
     console.log(data)
   },
-  setPlayer(state,){
-
-  }
+  setPlayers({state,player}){
+    state.player = player
   },
-  actions: {
+},
+actions: {
+      setPlayer({commit,dispatch},player){
+        commit('setPlayer', player)
+      },
     getPlayer({commit,dispatch}){
+      cardApi.get('players').then(res=>{
+        commit('setPlayer' , res.data)
+      })
 
     },
     deckSelection({dispatch,commit},choice){

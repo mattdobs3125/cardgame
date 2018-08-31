@@ -1,17 +1,25 @@
 <template>
-    <div class="Player" v-if="player.id">
-        <div v-for="card in player.hand" :key="card.id">
+    <div class="Player">
+     <!-- v-if="Player.id"> -->
+        <div v-for="card in Player.hand" :key="card.id">
 
-        {{player}}
+        {{Player}}
         </div>
 </div>
 </template>
 <script>
 export default {
-   name: 'Player',
-   computed :{
+   mounted(){
+       return this.$store.dispatch("getPlayer");
+   },
+   computed:{
        Player(){
-           return this.$store.state.player[0];
+           return this.$store.state.player
+       }
+   },
+   methods:{
+       setPlayer(player){
+           this.$store.dispatch('setPlayer', player)
        }
    }
 };
