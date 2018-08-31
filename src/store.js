@@ -26,34 +26,35 @@ export default new Vuex.Store({
     // router.push({name:'data',params:{ gameId: data.id}})
     console.log(data)
   },
-  setPlayers({state,player}){
-    state.player = player
-    console.log(player)
+  setPlayer(state,Player){
+    state.player = Player
+    console.log(Player)
   },
 },
 actions: {
-      setPlayer({commit,dispatch},player){
-        commit('setPlayer', player)
+      setPlayer({commit,dispatch},Player){
+        commit('setPlayer', Player)
       },
-    getPlayer({commit,dispatch}){
-      cardApi.get('players').then(res=>{
-        commit('setPlayer' , res.data)
-      })
 
-    },
+
     deckSelection({dispatch,commit},choice){
       let deckChoice 
       switch(choice){
         case 1:
-        deckChoice = {"playerName":"robotDeck","opponents": 1 ,"set":1}
+        deckChoice = {"playerName":"robotDeck","set":1}
         break
         case 2:
-        deckChoice = {"playerName":"catDeck","opponents": 1 ,"set":4}
+        deckChoice = {"playerName":"catDeck","set":4}
         break
         
               }
-              cardApi.post('/',{"ganeConfig" : deckChoice})
-              .then(res => commit('set' , res.data))
+              cardApi.post('/',{"gameConfig" : deckChoice})
+              .then(res => {
+                commit('set' , res.data)
+                commit('setPlayer', res.data.players[0])
+                console.log()
+              })
+
 
 
 
