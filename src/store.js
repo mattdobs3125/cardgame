@@ -28,6 +28,7 @@ export default new Vuex.Store({
   },
   setPlayers({state,player}){
     state.player = player
+    console.log(player)
   },
 },
 actions: {

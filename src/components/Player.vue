@@ -1,7 +1,7 @@
 <template>
     <div class="Player">
      <!-- v-if="Player.id"> -->
-        <div v-for="card in Player.hand" :key="card.id">
+        <div v-for="player in Player" :key="player.id">
 
         {{Player}}
         </div>
