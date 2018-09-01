@@ -6,8 +6,10 @@
     
       <div>
         <Player />
-     <!-- <img :src="car.img" > -->
       </div>
+     <div>
+       <adversary/>
+     </div>
    
   </div>
 </template>
@@ -23,11 +25,19 @@
 // @ is an alias to /src
 
 import Player from '@/components/Player.vue'
+import adversary from '@/components/Adversary.vue'
+
 export default {
   name: 'cards',
-  components: 
- {Player}, 
+  components:{
+    Player,
+    adversary
+ 
+ }, 
   methods:{
+setAdversary(adversary){
+this.$store.dispatch('setAdversary',adversary)
+},
 setPlayer(Player){
   console.log (Player)
   this.$store.dispatch('setPlayer',Player)

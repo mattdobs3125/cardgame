@@ -30,12 +30,17 @@ export default new Vuex.Store({
     state.player = Player
     console.log(Player)
   },
+  setAdversary(state,adversary){
+    state.adversary = adversary
+  }
 },
 actions: {
       setPlayer({commit,dispatch},Player){
         commit('setPlayer', Player)
       },
-
+      setAdversary({commit,dispatch},adversary){
+        commit('setAdversary',adversary)
+      },
 
     deckSelection({dispatch,commit},choice){
       let deckChoice 
@@ -52,6 +57,7 @@ actions: {
               .then(res => {
                 commit('set' , res.data)
                 commit('setPlayer', res.data.players[0])
+                commit('setAdversary',res.data.players[1])
                 console.log()
               })
 
