@@ -35,6 +35,12 @@ export default new Vuex.Store({
   }
 },
 actions: {
+setPlayerCard({commit,dispatch},card){
+commit('setPlayerCard',card)
+},
+  setAdversaryCard({commit,dispatch},card){
+    commit('setAdversaryCard', card)
+  },
       setPlayer({commit,dispatch},Player){
         commit('setPlayer', Player)
       },
