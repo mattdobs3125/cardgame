@@ -24,7 +24,7 @@ export default {
   computed: {
     Player() {
       return this.$store.state.player;
-    }
+    },
   },
   methods: {
     setPlayer(player) {

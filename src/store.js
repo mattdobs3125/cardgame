@@ -28,13 +28,13 @@ export default new Vuex.Store({
     console.log(data)
   },
   playerCardId(state,cardId){
-    debugger
+    
     state.playerCard = cardId
   },
   adversaryCardId(state,cardId){
 
-    debugger
     state.adversaryCard = cardId
+  debugger
   },
   setPlayer(state,Player){
     state.player = Player
@@ -46,9 +46,7 @@ export default new Vuex.Store({
 },
 actions: {
   
-  setAdversaryCard({commit,dispatch},card){
-    commit('setAdversaryCard', card)
-  },
+ 
   setPlayer({commit,dispatch},Player){
     commit('setPlayer', Player)
   },
@@ -80,9 +78,14 @@ actions: {
       commit('setPlayer', res.data.players[0])
       commit('setAdversary',res.data.players[1])
       
-    })
+    }),
     
     
+    fight ({dispatch,commit},hit){
+      cardApi.put('/'+ hit.battle)
+      .then(res=>{dispatch('set',res.data)})
+
+    }
     
     
   }

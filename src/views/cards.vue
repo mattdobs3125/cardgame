@@ -6,13 +6,13 @@
       <button type="button" class="btn btn-primary" @click='deckSelection(2)'>Cat Deck</button>
     
       <div>
-        <Player v-on:chosenCard="setPlayerCard(card)"/>
+        <Player/>
       </div>
       <div>
-
+        <playingGame/>
       </div>
      <div>
-       <adversary v-on:chosenCard="setAdversaryCard(card)"/>
+       <adversary/>
      </div>
    
   </div>
@@ -27,7 +27,7 @@
 
 <script>
 // @ is an alias to /src
-
+import playingGame from "@/components/PlayingGame"
 import Player from "@/components/Player.vue";
 import adversary from "@/components/Adversary.vue";
 
@@ -41,21 +41,22 @@ export default {
   },
   components: {
     Player,
-    adversary
+    adversary,
+    playingGame
   },
   methods: {
-    attack(){
-const Tattack ={
-	"playerId": this.cards.Player.id,
-	"playerCardId": this.setPlayerCard,
-	"opponentId": this.cards.adversary,
-	"opponentCardId": this.setAdversaryCard
+//     attack(){
+// const Tattack ={
+// 	"playerId": this.cards.Player.id,
+// 	"playerCardId": this.setPlayerCard,
+// 	"opponentId": this.cards.adversary,
+// 	"opponentCardId": this.setAdversaryCard
 
-}
+// }
+//     },
 
 
 
-    },
     // setAdversary(adversary) {
     //   this.$store.dispatch("setAdversary", adversary);
     // },
