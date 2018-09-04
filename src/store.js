@@ -34,7 +34,7 @@ export default new Vuex.Store({
   adversaryCardId(state,cardId){
 
     state.adversaryCard = cardId
-  debugger
+  
   },
   setPlayer(state,Player){
     state.player = Player
@@ -54,16 +54,23 @@ actions: {
     commit('setAdversary',adversary)
   },
   adversaryCardId({commit,dispatch},cardId){
-    debugger
+    
     commit('adversaryCardId',cardId)
   },
   playerCardId({commit,dispatch},cardId){
     commit('playerCardId',cardId)
   },
-  
+  redrawGame({commit,dispatch},gameId){
+    cardApi.get('/'+gameId)
+    .then(res=>{
+      commit('set',res.data.data)
+    }) 
+ 
+   },
+   
   fight ({dispatch,commit},hit){
     cardApi.put('/'+ hit.battle)
-    .then(res=>{dispatch('set',res.data)})
+    .then(res=>{dispatch("redrawGame",hit.game)})
 
   },
   deckSelection({dispatch,commit},choice){

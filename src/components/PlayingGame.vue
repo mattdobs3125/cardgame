@@ -1,10 +1,13 @@
 <template>
 <div>
+    <div>
+
     <h1>{{pCard }}</h1>
     <h1>{{aCard}}</h1>
     <h1>{{adversary}}</h1>
     <h1>{{player}}</h1>
-    <button@click="fight()">Fight!!!</button>
+    <button@click="fight()">kickssdsd</button>
+    </div>
 
 </div>
 </template>
@@ -32,13 +35,15 @@ computed:{
 
 methods:{
     fight(){
+        let game = this.game;
         let battle = {
             playerId : this.player,
             playerCardId : this.pCard,
             opponentId : this.adversary,
             opponentCardId : this.aCard
         };
-        this.$store.dispatch('fight',battle)
+
+        this.$store.dispatch('fight',{game,battle});
     }
 
 }
