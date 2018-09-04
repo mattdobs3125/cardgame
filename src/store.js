@@ -6,7 +6,7 @@ import router from './router';
 Vue.use(Vuex)
 
 let cardApi = Axios.create({
-  baseURL:'https://inspire-server.herokuapp.com/cards',
+  baseURL:'https://inspire-server.herokuapp.com/cards',   
   timout: 3000
 })
 
@@ -69,7 +69,7 @@ actions: {
    },
    
   fight ({dispatch,commit},hit){
-    cardApi.put('/'+ hit.battle)
+    cardApi.put('/'+ hit.game, hit.battle)
     .then(res=>{dispatch("redrawGame",hit.game)})
 
   },

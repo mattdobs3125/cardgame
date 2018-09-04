@@ -6,7 +6,7 @@
     <h1>{{aCard}}</h1>
     <h1>{{adversary}}</h1>
     <h1>{{player}}</h1>
-    <button@click="fight()">kickssdsd</button>
+    <button@click="fight()">FIGHTs</button>
     </div>
 
 </div>
@@ -20,7 +20,7 @@ computed:{
         return this.$store.state.adversaryCard
     },
     pCard(){
-        return this.$store.state.playerCard
+        return this.$store.state.playerCard   
     },
     player(){
         return this.$store.state.player.id
