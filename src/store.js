@@ -61,6 +61,11 @@ actions: {
     commit('playerCardId',cardId)
   },
   
+  fight ({dispatch,commit},hit){
+    cardApi.put('/'+ hit.battle)
+    .then(res=>{dispatch('set',res.data)})
+
+  },
   deckSelection({dispatch,commit},choice){
     let deckChoice 
     switch(choice){
@@ -78,17 +83,12 @@ actions: {
       commit('setPlayer', res.data.players[0])
       commit('setAdversary',res.data.players[1])
       
-    }),
+    })
     
-    
-    fight ({dispatch,commit},hit){
-      cardApi.put('/'+ hit.battle)
-      .then(res=>{dispatch('set',res.data)})
-
-    }
     
     
   }
+  
   
   
 }

@@ -4,6 +4,7 @@
     <h1>{{aCard}}</h1>
     <h1>{{adversary}}</h1>
     <h1>{{player}}</h1>
+    <button@click="fight()">Fight!!!</button>
 
 </div>
 </template>
@@ -31,11 +32,11 @@ computed:{
 
 methods:{
     fight(){
-        battle = {
-            playerId : player,
-            playerCardId : pCard,
-            opponentId : adversary,
-            opponentCardId : aCard
+        let battle = {
+            playerId : this.player,
+            playerCardId : this.pCard,
+            opponentId : this.adversary,
+            opponentCardId : this.aCard
         };
         this.$store.dispatch('fight',battle)
     }
