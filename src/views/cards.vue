@@ -1,10 +1,12 @@
 
 <template>
   <div class="game">
+    <div v-if="!game.id">
       <h1>Choose Your Deck</h1>
       <button type="button" class="btn btn-warning" @click='deckSelection(1)'>Robot Deck</button>
       <button type="button" class="btn btn-primary" @click='deckSelection(2)'>Cat Deck</button>
-    
+    </div>
+    <div v-if="!game.over">
       <div>
         <Player/>
       </div>
@@ -14,6 +16,10 @@
      <div>
        <adversary/>
      </div>
+    </div>
+    <div v-if="game.over">
+      <h1>Game Results: {{game.winner.name}}</h1>
+    </div>
    
   </div>
 </template>
@@ -27,7 +33,7 @@
 
 <script>
 // @ is an alias to /src
-import playingGame from "@/components/PlayingGame"
+import playingGame from "@/components/PlayingGame";
 import Player from "@/components/Player.vue";
 import adversary from "@/components/Adversary.vue";
 
@@ -45,17 +51,15 @@ export default {
     playingGame
   },
   methods: {
-//     attack(){
-// const Tattack ={
-// 	"playerId": this.cards.Player.id,
-// 	"playerCardId": this.setPlayerCard,
-// 	"opponentId": this.cards.adversary,
-// 	"opponentCardId": this.setAdversaryCard
+    //     attack(){
+    // const Tattack ={
+    // 	"playerId": this.cards.Player.id,
+    // 	"playerCardId": this.setPlayerCard,
+    // 	"opponentId": this.cards.adversary,
+    // 	"opponentCardId": this.setAdversaryCard
 
-// }
-//     },
-
-
+    // }
+    //     },
 
     // setAdversary(adversary) {
     //   this.$store.dispatch("setAdversary", adversary);
@@ -72,7 +76,7 @@ export default {
     setAdversaryCard() {
       return this.$store.adversaryCard;
     },
-    setPlayerCard(){
+    setPlayerCard() {
       return this.$store.playerCard;
     },
     game() {
