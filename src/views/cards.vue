@@ -45,24 +45,6 @@ export default {
     playingGame
   },
   methods: {
-//     attack(){
-// const Tattack ={
-// 	"playerId": this.cards.Player.id,
-// 	"playerCardId": this.setPlayerCard,
-// 	"opponentId": this.cards.adversary,
-// 	"opponentCardId": this.setAdversaryCard
-
-// }
-//     },
-
-
-
-    // setAdversary(adversary) {
-    //   this.$store.dispatch("setAdversary", adversary);
-    // },
-    // setPlayer(Player) {
-    //   this.$store.dispatch("setPlayer", Player);
-    // },
 
     deckSelection(deckChoice) {
       this.$store.dispatch("deckSelection", deckChoice);

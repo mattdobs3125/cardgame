@@ -24,7 +24,8 @@ export default new Vuex.Store({
   mutations: {
   set (state, data){
     state.game = data
-    // router.push({name:'data',params:{ gameId: data.id}})
+    
+  
     console.log(data)
   },
   playerCardId(state,cardId){
@@ -38,7 +39,7 @@ export default new Vuex.Store({
   },
   setPlayer(state,Player){
     state.player = Player
-    console.log(Player)
+    
   },
   setAdversary(state,adversary){
     state.adversary = adversary
@@ -60,11 +61,12 @@ actions: {
   playerCardId({commit,dispatch},cardId){
     commit('playerCardId',cardId)
   },
-  redrawGame({commit,dispatch},gameId){
-    cardApi.get('/'+gameId)
+  redrawGame({commit,dispatch},game){
+    cardApi.get('/' + game)
     .then(res=>{
       commit('set',res.data.data)
     }) 
+ 
  
    },
    

@@ -3,13 +3,13 @@
         <div class="col-4">
 
         <div v-for="card in Player.hand" :key="card.id">
-             <img v-if="!card.visible" :key="card.id" @click="setPlayerCard(card.id)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw7YuuQbInLJFRjJT-K6GdhsIi_c9-DIg-59H_pmfO_Sv_9gWl">
-           <div v-else-if="card.visible">
-           <img :src="card.img" alt="">
+             <img v-if="card.visible=false" :key="card.id" @click="setPlayerCard(card.id)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw7YuuQbInLJFRjJT-K6GdhsIi_c9-DIg-59H_pmfO_Sv_9gWl">
+           <div v-else-if="card.visible=true">
+           <img :key="card.id" @click="setPlayerCard(card.id)" :src="card.img" alt="">
            <div class="hand">
            
-            {{card.name}} 
-            {{card.health}}
+            <h1>{{card.name}}</h1> 
+            <h1>{{card.health}}</h1>
             {{card.defense}}
            </div>
         </div>
@@ -38,10 +38,5 @@ export default {
 };
 </script>
 <style>
-/* .hand{
-     display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
-} */
+
 </style>

@@ -2,10 +2,10 @@
 <div>
     <div>
 
-    <h1>{{pCard }}</h1>
+    <!-- <h1>{{pCard }}</h1>
     <h1>{{aCard}}</h1>
     <h1>{{adversary}}</h1>
-    <h1>{{player}}</h1>
+    <h1>{{player}}</h1> -->
     <button@click="fight()">FIGHTs</button>
     </div>
 
