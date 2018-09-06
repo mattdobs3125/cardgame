@@ -21,59 +21,6 @@ export default new Vuex.Store({
     adversaryCard: ""
   },
   mutations: {
-<<<<<<< HEAD
-  set (state, data){
-    state.game = data
-    
-  
-    console.log(data)
-  },
-  playerCardId(state,cardId){
-    
-    state.playerCard = cardId
-  },
-  adversaryCardId(state,cardId){
-
-    state.adversaryCard = cardId
-  
-  },
-  setPlayer(state,Player){
-    state.player = Player
-    
-  },
-  setAdversary(state,adversary){
-    state.adversary = adversary
-  }
-},
-actions: {
-  
- 
-  setPlayer({commit,dispatch},Player){
-    commit('setPlayer', Player)
-  },
-  setAdversary({commit,dispatch},adversary){
-    commit('setAdversary',adversary)
-  },
-  adversaryCardId({commit,dispatch},cardId){
-    
-    commit('adversaryCardId',cardId)
-  },
-  playerCardId({commit,dispatch},cardId){
-    commit('playerCardId',cardId)
-  },
-  redrawGame({commit,dispatch},game){
-    cardApi.get('/' + game)
-    .then(res=>{
-      commit('set',res.data.data)
-    }) 
- 
- 
-   },
-   
-  fight ({dispatch,commit},hit){
-    cardApi.put('/'+ hit.game, hit.battle)
-    .then(res=>{dispatch("redrawGame",hit.game)})
-=======
     set(state, data) {
       state.game = data;
     },
@@ -116,7 +63,6 @@ actions: {
         commit("resetC");
       });
     },
->>>>>>> 39b861700b8c084decc2ff18b14acab503cf81c1
 
     fight({ dispatch, commit }, hit) {
       cardApi.put("/" + hit.game, hit.battle).then(res => {

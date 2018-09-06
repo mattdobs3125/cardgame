@@ -51,8 +51,6 @@ export default {
     playingGame
   },
   methods: {
-<<<<<<< HEAD
-=======
     //     attack(){
     // const Tattack ={
     // 	"playerId": this.cards.Player.id,
@@ -69,7 +67,6 @@ export default {
     // setPlayer(Player) {
     //   this.$store.dispatch("setPlayer", Player);
     // },
->>>>>>> 39b861700b8c084decc2ff18b14acab503cf81c1
 
     deckSelection(deckChoice) {
       this.$store.dispatch("deckSelection", deckChoice);

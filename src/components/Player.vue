@@ -1,29 +1,16 @@
 <template>
-  <div class="Player row">
-    <div class="col-4">
+  <div class="Player">
+    <div class="col-6">
 
-<<<<<<< HEAD
-        <div v-for="card in Player.hand" :key="card.id">
-             <img v-if="card.visible=false" :key="card.id" @click="setPlayerCard(card.id)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw7YuuQbInLJFRjJT-K6GdhsIi_c9-DIg-59H_pmfO_Sv_9gWl">
-           <div v-else-if="card.visible=true">
-           <img :key="card.id" @click="setPlayerCard(card.id)" :src="card.img" alt="">
-           <div class="hand">
-           
-            <h1>{{card.name}}</h1> 
-            <h1>{{card.health}}</h1>
-            {{card.defense}}
-           </div>
-=======
       <div v-for="card in Player.hand" :key="card.id">
         <div>
-          <img :src="card.img" :key="card.id" @click='setPlayerCard(card.id)' alt="">
+          <img style="height: 140px; width: 85%;" :src="card.img" :key="card.id" @click='setPlayerCard(card.id)' alt="">
           <div class="hand">
-            <h4>Name: {{card.name}}</h4>
-            <h4>Cards Current Health : {{card.health}}</h4>
-            <h4>Attack : {{card.attack}}</h4>
-            <h4> Defense : {{card.defense}}</h4>
+            <h5 class="lok">Name: {{card.name}}</h5>
+            <h5 class="lok">Health : {{card.health}}</h5>
+            <h5 class="lok">Attack : {{card.attack}}</h5>
+            <h5 class="lok"> Defense : {{card.defense}}</h5>
           </div>
->>>>>>> 39b861700b8c084decc2ff18b14acab503cf81c1
         </div>
       </div>
     </div>
@@ -46,15 +33,21 @@
     }
   };
 </script>
-<<<<<<< HEAD
 <style>
+.lok{
+  color: rgb(8, 6, 6);
 
-</style>
-=======
-<style scoped>
-  .row{
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+  .col-6 {
 
+   display: flex;
   flex-direction: row;
+   
+   
+  
+
+  
+  
 }
 </style>
->>>>>>> 39b861700b8c084decc2ff18b14acab503cf81c1

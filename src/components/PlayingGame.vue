@@ -1,14 +1,6 @@
 <template>
 <div>
     <div>
-<<<<<<< HEAD
-
-    <!-- <h1>{{pCard }}</h1>
-    <h1>{{aCard}}</h1>
-    <h1>{{adversary}}</h1>
-    <h1>{{player}}</h1> -->
-    <button@click="fight()">FIGHTs</button>
-=======
        <h1> {{aCard}}</h1>
         <h1>
             {{pCard}}
@@ -22,7 +14,6 @@
         {{player}}
             </h1>
        <button type="button" class="btn btn-danger" @click="fight()">FIGHT</button>
->>>>>>> 39b861700b8c084decc2ff18b14acab503cf81c1
     </div>
 
 </div>
@@ -31,6 +22,13 @@
 export default {
   name: "playingGame",
   computed: {
+  you(){
+    return this.store.player;
+  },
+  opp(){
+    return this.$store.adversary
+  },
+
     aCard() {
       return this.$store.state.adversaryCard;
     },
