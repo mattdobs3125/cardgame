@@ -1,8 +1,9 @@
 <template>
-  <div class="Player">
+  <div class="Player row">
+     <div class="col-3"></div>
     <div class="col-6">
 
-      <div v-for="card in Player.hand" :key="card.id">
+      <div class="playerHand" v-for="card in Player.hand" :key="card.id">
         <div>
           <img style="height: 140px; width: 85%;" :src="card.img" :key="card.id" @click='setPlayerCard(card.id)' alt="">
           <div class="hand">
@@ -13,6 +14,7 @@
           </div>
         </div>
       </div>
+       <div class="col-3"></div>
     </div>
   </div>
 </template>
@@ -41,13 +43,16 @@ text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40
 }
   .col-6 {
 
-   display: flex;
+   /* display: flex; */
   flex-direction: row;
+}
+.playerHand  
+ {
    
-   
+   /* padding: .5in; */
+ }  
   
 
   
   
-}
 </style>

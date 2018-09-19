@@ -13,7 +13,15 @@
 
         {{player}}
             </h1>
+            <div class='row'>
+
+            <div class="fightButton col-2">
+
        <button type="button" class="btn btn-danger" @click="fight()">FIGHT</button>
+            </div>
+            <div class="col-8"></div>
+            </div>
+          
     </div>
 
 </div>
