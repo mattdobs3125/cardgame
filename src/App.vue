@@ -16,6 +16,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  /* background-color:rebeccapurple; */
+  background-image: './photos/downlaod.jpeg';
 }
 #nav {
   padding: 30px;

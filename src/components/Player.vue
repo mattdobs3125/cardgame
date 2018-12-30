@@ -37,17 +37,19 @@
 </script>
 <style>
 .lok{
+  border-block-end: 3rem;
   color: rgb(8, 6, 6);
-
+justify-content: right;
 text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
 }
   .col-6 {
 
-   /* display: flex; */
+   justify-content: right;
   flex-direction: row;
 }
 .playerHand  
  {
+   border-block-end: 3rem;
    
    /* padding: .5in; */
  }  

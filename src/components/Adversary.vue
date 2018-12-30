@@ -3,8 +3,8 @@
       <div class="col-3"></div>
         <div class="col-6">
 
-          <div v-for="card in adversary.hand" :key="card.id">
-            <img v-if="!card.visible" :key="card.id" @click='setAdversaryCard(card.id)' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtBF_hN9qKTYv-KFj2fvps1CQnU-04P1V4Adw6Wwons7uIq5m8">
+          <div class="adversary" v-for="card in adversary.hand" :key="card.id">
+            <img v-if="!card.visible" :key="card.id" @click='setAdversaryCard(card.id)' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtBF_hN9qKTYv-KFj2fvps1CQnU-04P1V4Adw6Wwons7uIq5m8" width="150" height="250">
            <div v-else-if="card.visible">
            <img :src="card.img" :key="card.id" @click='setAdversaryCard(card.id)' alt=""  >
              <h5 class="lok">Name: {{card.name}}</h5>
@@ -45,8 +45,13 @@ export default {
    display: flex;
   flex-direction: row;
    justify-content: right;
+   padding-right: 6rem;
+
    
 }
+
+
+
 </style>
   
 

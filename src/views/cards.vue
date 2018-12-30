@@ -88,3 +88,13 @@ export default {
   }
 };
 </script>
+<style scoped>
+.game{
+  /* background-image:"https://vignette.wikia.nocookie.net/world-of-cataclysm/images/f/f6/Background_naruto_by_nitopfam-d78kh4e.png/revision/latest?cb=20180325151742" */
+/* background-color: aqua; */
+background-image:url("https://vignette.wikia.nocookie.net/world-of-cataclysm/images/f/f6/Background_naruto_by_nitopfam-d78kh4e.png/revision/latest?cb=20180325151742 ");
+width: 500px;
+ height: 600px;
+}
+</style>
+

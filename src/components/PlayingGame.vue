@@ -1,7 +1,7 @@
 <template>
 <div>
     <div>
-       <h1> {{aCard}}</h1>
+       <!-- <h1> {{aCard}}</h1>
         <h1>
             {{pCard}}
             </h1>
@@ -12,7 +12,7 @@
             <h1>
 
         {{player}}
-            </h1>
+            </h1> -->
             <div class='row'>
 
             <div class="fightButton col-2">
@@ -70,4 +70,7 @@ export default {
 };
 </script>
 <style scoped>
+.btn-danger{
+  justify-content: center;
+}
 </style>
