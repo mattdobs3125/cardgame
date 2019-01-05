@@ -71,6 +71,6 @@ export default {
 </script>
 <style scoped>
 .btn-danger{
-  justify-content: center;
+  justify-content: right;
 }
 </style>

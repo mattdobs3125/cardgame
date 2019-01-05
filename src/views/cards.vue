@@ -1,19 +1,19 @@
 
 <template>
-  <div class="game">
-    <div v-if="!game.id">
+  <div class="game row">
+    <div  class="col-12" v-if="!game.id">
       <h1>Choose Your Deck</h1>
       <button type="button" class="btn btn-warning" @click='deckSelection(1)'>Robot Deck</button>
       <button type="button" class="btn btn-primary" @click='deckSelection(2)'>Cat Deck</button>
     </div>
-    <div v-if="!game.over">
-      <div>
-        <Player/>
-      </div>
+    <div  class="col-12" v-if="!game.over">
       <div>
         <playingGame/>
       </div>
-     <div>
+      <div class="col-12">
+        <Player class="player"/>
+      </div>
+     <div class="col-12">
        <adversary/>
      </div>
     </div>
@@ -91,10 +91,15 @@ export default {
 <style scoped>
 .game{
   /* background-image:"https://vignette.wikia.nocookie.net/world-of-cataclysm/images/f/f6/Background_naruto_by_nitopfam-d78kh4e.png/revision/latest?cb=20180325151742" */
-/* background-color: aqua; */
-background-image:url("https://vignette.wikia.nocookie.net/world-of-cataclysm/images/f/f6/Background_naruto_by_nitopfam-d78kh4e.png/revision/latest?cb=20180325151742 ");
+background-color: aqua;
+/* background-image:url("https://vignette.wikia.nocookie.net/world-of-cataclysm/images/f/f6/Background_naruto_by_nitopfam-d78kh4e.png/revision/latest?cb=20180325151742 "); */
 width: 500px;
  height: 600px;
+  justify-content: right;
+  flex-direction: row;
+}
+.player{
+  
 }
 </style>
 

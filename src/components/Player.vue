@@ -5,7 +5,7 @@
 
       <div class="playerHand" v-for="card in Player.hand" :key="card.id">
         <div>
-          <img style="height: 140px; width: 85%;" :src="card.img" :key="card.id" @click='setPlayerCard(card.id)' alt="">
+          <img style="height: 200px; width: 150px;" :src="card.img" :key="card.id" @click='setPlayerCard(card.id)' alt="">
           <div class="hand">
             <h5 class="lok">Name: {{card.name}}</h5>
             <h5 class="lok">Health : {{card.health}}</h5>
@@ -44,12 +44,12 @@ text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40
 }
   .col-6 {
 
-   justify-content: right;
   flex-direction: row;
+   justify-content: center;
 }
 .playerHand  
  {
-   border-block-end: 3rem;
+    padding-right: 34px;
    
    /* padding: .5in; */
  }  
