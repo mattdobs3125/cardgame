@@ -7,7 +7,7 @@
         <div>
           <img style="height: 200px; width: 150px;" :src="card.img" :key="card.id" @click='setPlayerCard(card.id)' alt="">
           <div class="hand">
-            <h5 class="lok">Name: {{card.name}}</h5>
+            <h5 class="lok">{{card.name}}</h5>
             <h5 class="lok">Health : {{card.health}}</h5>
             <h5 class="lok">Attack : {{card.attack}}</h5>
             <h5 class="lok"> Defense : {{card.defense}}</h5>
@@ -37,20 +37,33 @@
 </script>
 <style>
 .lok{
-  border-block-end: 3rem;
+  /* border-block-end: 2px; */
+   border-block-end: 3rem; 
   color: rgb(8, 6, 6);
 justify-content: right;
-text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00; 
 }
   .col-6 {
 
   flex-direction: row;
-   justify-content: center;
+   /* justify-content: center; */
+    justify-content: space-evenly
+
+}
+.hand{
+    border-color: #808080 #000000 #000000 #808080;
+  border-width: 1px;
+  border-style: solid;
+
+
 }
 .playerHand  
  {
-    padding-right: 34px;
-   
+    padding-right: 31px;
+    /* border-color: #808080 #000000 #000000 #808080;
+  border-width: 3px;
+  border-style: solid; */
+
    /* padding: .5in; */
  }  
   

@@ -15,11 +15,11 @@
             </h1> -->
             <div class='row'>
 
-            <div class="fightButton col-2">
+            <div class="fightButton col-12">
 
-       <button type="button" class="btn btn-danger" @click="fight()">FIGHT</button>
+       <button type="button" class="btn btn-danger btn-lg" @click="fight()">FIGHT</button>
             </div>
-            <div class="col-8"></div>
+            <!-- <div class="col-8"></div> -->
             </div>
           
     </div>
@@ -71,6 +71,6 @@ export default {
 </script>
 <style scoped>
 .btn-danger{
-  justify-content: right;
+  justify-content: center;
 }
 </style>

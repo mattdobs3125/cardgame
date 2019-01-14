@@ -1,17 +1,18 @@
 
 <template>
-  <div class="game row">
-    <div  class="col-12" v-if="!game.id">
-      <h1>Choose Your Deck</h1>
-      <button type="button" class="btn btn-warning" @click='deckSelection(1)'>Robot Deck</button>
-      <button type="button" class="btn btn-primary" @click='deckSelection(2)'>Cat Deck</button>
-    </div>
+  <div class="game">
+    <div class="row">
+     <div  class="col-12" v-if="!game.id">
+       <h1>Choose Your Deck</h1>
+       <button type="button" class="btn btn-warning" @click='deckSelection(1)'>Robot Deck</button>
+       <button type="button" class="btn btn-primary" @click='deckSelection(2)'>Cat Deck</button>
+     </div>
     <div  class="col-12" v-if="!game.over">
-      <div>
-        <playingGame/>
-      </div>
       <div class="col-12">
         <Player class="player"/>
+      </div>
+      <div>
+        <playingGame/>
       </div>
      <div class="col-12">
        <adversary/>
@@ -20,7 +21,13 @@
     <div v-if="game.over">
       <h1>Game Results: {{game.winner.name}}</h1>
     </div>
-   
+   </div>
+  <div class="row">
+     <div class="col-12">
+
+     </div>
+
+    </div>
   </div>
 </template>
 
@@ -98,8 +105,8 @@ width: 500px;
   justify-content: right;
   flex-direction: row;
 }
-.player{
-  
-}
+/* .col-12{
+  background-color:black;
+} */
 </style>
 
